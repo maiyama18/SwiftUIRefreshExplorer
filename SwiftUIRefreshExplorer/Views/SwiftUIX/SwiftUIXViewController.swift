@@ -16,10 +16,7 @@ struct SwiftUIXView: View {
         CocoaScrollView {
             LazyVStack {
                 ForEach(dataSource.nums, id: \.self) { num in
-                    Text("Item #\(num)")
-                        .padding()
-                        .frame(height: 44)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    ItemView(num: num)
                 }
             }
         }

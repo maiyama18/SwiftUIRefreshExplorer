@@ -22,6 +22,7 @@
 		3870F5322751941300720FB4 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F5312751941300720FB4 /* SwiftUIRefresh */; };
 		3870F5342751941300720FB4 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F5332751941300720FB4 /* SwiftUIX */; };
 		3870F5382751970C00720FB4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F5372751970C00720FB4 /* UIViewController+Extension.swift */; };
+		3870F53B2751986200720FB4 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F53A2751986200720FB4 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		3870F5262751019F00720FB4 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		3870F52E275105D300720FB4 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		3870F5372751970C00720FB4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3870F53A2751986200720FB4 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		38277F422750BF30006E908A /* SwiftUIRefreshExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				3870F5392751985B00720FB4 /* Components */,
 				3870F536275196FD00720FB4 /* Extension */,
 				3870F5282751036000720FB4 /* DataSource */,
 				3870F5182751009600720FB4 /* Views */,
@@ -163,6 +166,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		3870F5392751985B00720FB4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3870F53A2751986200720FB4 /* ItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +258,7 @@
 				38277F442750BF30006E908A /* AppDelegate.swift in Sources */,
 				3870F5272751019F00720FB4 /* CustomViewController.swift in Sources */,
 				38277F462750BF30006E908A /* SceneDelegate.swift in Sources */,
+				3870F53B2751986200720FB4 /* ItemView.swift in Sources */,
 				3870F5382751970C00720FB4 /* UIViewController+Extension.swift in Sources */,
 				3870F5212751014B00720FB4 /* SwiftUIRefreshViewController.swift in Sources */,
 				3870F5232751016A00720FB4 /* SwiftUIPullToRefreshViewController.swift in Sources */,
