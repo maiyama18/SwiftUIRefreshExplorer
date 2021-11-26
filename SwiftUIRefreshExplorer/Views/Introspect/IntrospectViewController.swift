@@ -1,6 +1,6 @@
 import UIKit
 
-final class UIKitViewController: UIViewController {
+final class IntrospectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown

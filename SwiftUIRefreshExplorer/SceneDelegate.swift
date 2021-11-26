@@ -16,8 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let custom = CustomViewController()
         custom.tabBarItem = UITabBarItem(title: "Custom", image: UIImage(systemName: "heart"), tag: 0)
         
-        let uiKit = UIKitViewController()
-        uiKit.tabBarItem = UITabBarItem(title: "UIKit", image: UIImage(systemName: "bolt"), tag: 1)
+        let introspect = IntrospectViewController()
+        introspect.tabBarItem = UITabBarItem(title: "Introspect", image: UIImage(systemName: "bolt"), tag: 1)
         
         let swiftUIRefresh = SwiftUIRefreshViewController()
         swiftUIRefresh.tabBarItem = UITabBarItem(title: "SwiftUIRefresh", image: UIImage(systemName: "airplane"), tag: 2)
@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         swiftUIPullToRefresh.tabBarItem = UITabBarItem(title: "SwiftUIPullToRefresh", image: UIImage(systemName: "sum"), tag: 4)
         
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [custom, uiKit, swiftUIPullToRefresh, swiftUIX, swiftUIRefresh]
+        tabBarViewController.viewControllers = [custom, introspect, swiftUIPullToRefresh, swiftUIX, swiftUIRefresh]
         tabBarViewController.selectedIndex = 0
         return tabBarViewController
     }
