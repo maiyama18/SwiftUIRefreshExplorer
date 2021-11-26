@@ -17,6 +17,7 @@
 		3870F5232751016A00720FB4 /* SwiftUIPullToRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F5222751016A00720FB4 /* SwiftUIPullToRefreshViewController.swift */; };
 		3870F5252751018500720FB4 /* UIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F5242751018500720FB4 /* UIKitViewController.swift */; };
 		3870F5272751019F00720FB4 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F5262751019F00720FB4 /* CustomViewController.swift */; };
+		3870F52B2751055500720FB4 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F52A2751055500720FB4 /* SwiftUIPullToRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3870F52B2751055500720FB4 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +66,7 @@
 		38277F422750BF30006E908A /* SwiftUIRefreshExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				3870F5282751036000720FB4 /* DataSource */,
 				3870F5182751009600720FB4 /* Views */,
 				3870F5152750FCF100720FB4 /* Main.storyboard */,
 				38277F432750BF30006E908A /* AppDelegate.swift */,
@@ -127,6 +130,13 @@
 			path = SwiftUIX;
 			sourceTree = "<group>";
 		};
+		3870F5282751036000720FB4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +153,9 @@
 			dependencies = (
 			);
 			name = SwiftUIRefreshExplorer;
+			packageProductDependencies = (
+				3870F52A2751055500720FB4 /* SwiftUIPullToRefresh */,
+			);
 			productName = SwiftUIRefreshExplorer;
 			productReference = 38277F402750BF30006E908A /* SwiftUIRefreshExplorer.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +184,11 @@
 				Base,
 			);
 			mainGroup = 38277F372750BF30006E908A;
+			packageReferences = (
+				3870F5292751055500720FB4 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */,
+				3870F52C2751056400720FB4 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				3870F52D2751058A00720FB4 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 38277F412750BF30006E908A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,6 +442,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3870F5292751055500720FB4 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-pull-to-refresh";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		3870F52C2751056400720FB4 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3870F52D2751058A00720FB4 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3870F52A2751055500720FB4 /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3870F5292751055500720FB4 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38277F382750BF30006E908A /* Project object */;
 }
