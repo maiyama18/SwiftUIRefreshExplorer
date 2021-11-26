@@ -19,6 +19,8 @@
 		3870F5272751019F00720FB4 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F5262751019F00720FB4 /* CustomViewController.swift */; };
 		3870F52B2751055500720FB4 /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F52A2751055500720FB4 /* SwiftUIPullToRefresh */; };
 		3870F52F275105D300720FB4 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3870F52E275105D300720FB4 /* DataSource.swift */; };
+		3870F5322751941300720FB4 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F5312751941300720FB4 /* SwiftUIRefresh */; };
+		3870F5342751941300720FB4 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 3870F5332751941300720FB4 /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3870F5342751941300720FB4 /* SwiftUIX in Frameworks */,
+				3870F5322751941300720FB4 /* SwiftUIRefresh in Frameworks */,
 				3870F52B2751055500720FB4 /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +58,7 @@
 			children = (
 				38277F422750BF30006E908A /* SwiftUIRefreshExplorer */,
 				38277F412750BF30006E908A /* Products */,
+				3870F5302751941300720FB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +145,13 @@
 			path = DataSource;
 			sourceTree = "<group>";
 		};
+		3870F5302751941300720FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +170,8 @@
 			name = SwiftUIRefreshExplorer;
 			packageProductDependencies = (
 				3870F52A2751055500720FB4 /* SwiftUIPullToRefresh */,
+				3870F5312751941300720FB4 /* SwiftUIRefresh */,
+				3870F5332751941300720FB4 /* SwiftUIX */,
 			);
 			productName = SwiftUIRefreshExplorer;
 			productReference = 38277F402750BF30006E908A /* SwiftUIRefreshExplorer.app */;
@@ -479,6 +493,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3870F5292751055500720FB4 /* XCRemoteSwiftPackageReference "swiftui-pull-to-refresh" */;
 			productName = SwiftUIPullToRefresh;
+		};
+		3870F5312751941300720FB4 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3870F52C2751056400720FB4 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
+		3870F5332751941300720FB4 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3870F52D2751058A00720FB4 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
