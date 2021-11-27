@@ -18,6 +18,9 @@ struct UIViewRepresentableScrollView: View {
             refreshing: dataSource.refreshing,
             onRefresh: {
                 dataSource.refresh()
+            },
+            customize: { scrollView in
+                scrollView.showsVerticalScrollIndicator = false
             }
         ) {
             VStack {
