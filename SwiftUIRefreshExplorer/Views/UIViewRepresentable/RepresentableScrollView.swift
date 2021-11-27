@@ -17,13 +17,25 @@ struct RepresentableScrollView<Content: View>: UIViewRepresentable {
     
     let refreshing: Bool
     let onRefresh: () -> Void
-    let customize: (UIScrollView) -> Void
+    let customize: ((UIScrollView) -> Void)?
     @ViewBuilder let content: () -> Content
+    
+    init(
+        refreshing: Bool,
+        onRefresh: @escaping () -> Void,
+        customize: ((UIScrollView) -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.refreshing = refreshing
+        self.onRefresh = onRefresh
+        self.customize = customize
+        self.content = content
+    }
     
     func makeUIView(context: Context) -> UIScrollView {
         let scrollView = UIScrollView()
         
-        customize(scrollView)
+        customize?(scrollView)
         
         scrollView.setupSwiftUIView(rootView: content())
         
@@ -50,8 +62,20 @@ struct RepresentableScrollView<Content: View>: UIViewRepresentable {
 struct RepresentableList<Content: View>: View {
     let refreshing: Bool
     let onRefresh: () -> Void
-    let customize: (UIScrollView) -> Void
+    let customize: ((UIScrollView) -> Void)?
     @ViewBuilder let content: () -> Content
+    
+    init(
+        refreshing: Bool,
+        onRefresh: @escaping () -> Void,
+        customize: ((UIScrollView) -> Void)? = nil,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.refreshing = refreshing
+        self.onRefresh = onRefresh
+        self.customize = customize
+        self.content = content
+    }
     
     var body: some View {
         GeometryReader { proxy in
