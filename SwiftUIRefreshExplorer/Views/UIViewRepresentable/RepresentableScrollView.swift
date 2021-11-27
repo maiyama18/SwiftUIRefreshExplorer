@@ -42,3 +42,20 @@ struct RepresentableScrollView<Content: View>: UIViewRepresentable {
         Coordinator(onRefresh: onRefresh)
     }
 }
+
+struct RepresentableList<Content: View>: View {
+    let refreshing: Bool
+    let onRefresh: () -> Void
+    @ViewBuilder let content: () -> Content
+    
+    var body: some View {
+        GeometryReader { proxy in
+            RepresentableScrollView(refreshing: refreshing, onRefresh: onRefresh) {
+                List {
+                    content()
+                }
+                .frame(width: proxy.size.width, height: proxy.size.height)
+            }
+        }
+    }
+}
